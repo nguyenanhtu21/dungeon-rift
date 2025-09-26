@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e1c55f9217e284280dce759ebd39b3, type: 3}
+  m_Name: Soccerer
+  m_EditorClassIdentifier: 
+  characterName: Soccerer
+  maxHP: 100
+  maxMana: 150
+  normalAttackDamage: 25
+  skillIcon: {fileID: 8255064088849822949, guid: 4d82ae2f6aed45840bbab3f97740524e, type: 3}
+  skillDamage: 40
+  skillManaCost: 50
+  skillCooldown: 3
+  skillAnimationTrigger: Skill Attack
+  skillProjectilePrefab: {fileID: 2327439215663319164, guid: ab6daecdc0066e2409ee10a25d8ef768, type: 3}
+  skillIsAOE: 1
+  skillExplosionRadius: 0
+  attackType: 1
+  projectilePrefab: {fileID: 2327439215663319164, guid: ab6daecdc0066e2409ee10a25d8ef768, type: 3}

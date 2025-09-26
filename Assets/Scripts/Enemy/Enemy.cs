@@ -30,7 +30,6 @@ public class Enemy : MonoBehaviour
     private Transform target;
 
     private float nextAttackTime = 0f;
-    private bool isHurt = false;
     private bool isDead = false;
 
     private enum EnemyState { Patrol, Chase, Attack, Hurt, Die }
@@ -193,16 +192,13 @@ public class Enemy : MonoBehaviour
     private IEnumerator ApplyKnockback(Vector2 direction)
     {
         state = EnemyState.Hurt;
-        isHurt = true;
 
         rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(hurtDuration);
 
         rb.linearVelocity = Vector2.zero;
-        isHurt = false;
 
-        // quay lại Chase nếu thấy player, ngược lại về Patrol
         if (target != null)
         {
             state = EnemyState.Chase;
@@ -223,7 +219,7 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Die");
         rb.linearVelocity = Vector2.zero;
 
-        Destroy(gameObject, 1.5f); // hoặc gọi qua Animation Event
+        Destroy(gameObject, 1.5f); 
     }
 
     private void OnDrawGizmosSelected()
